@@ -1,0 +1,78 @@
+<%@ page language="java" contentType="text/html; charset=EUC-KR"
+   pageEncoding="EUC-KR"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+</head>
+<body>
+  <%
+  request.setCharacterEncoding("EUC-KR");
+
+ 
+  String name =request.getParameter("name");
+  int java =Integer.parseInt(request.getParameter("java"));  // Integer.parseInt()은 문자형에서 숫자형으로 자료를 변환한다 
+  int web =Integer.parseInt(request.getParameter("web"));
+  int iot =Integer.parseInt(request.getParameter("iot"));
+  int android =Integer.parseInt(request.getParameter("android"));
+  
+  int hap = java + web + iot + android;
+  double sum = hap/4.0 ;
+  String score ="";
+  
+  if(sum >= 95){
+	  score = "A+";
+  }else if(sum >= 85){
+	  score = "A";
+  }else if(sum >= 80){
+	  score = "B+";
+  }else if(sum >= 70){
+	  score = "C";
+  }else{
+	  score = "F";
+  }
+  
+  %>
+  
+   <form action="ex09scoreResult.jsp" method="post">
+      <fieldset>   <!-- 태두리를 지어주는 태그 -->
+         <legend>학점확인프로그램</legend>   <!-- 제목을 지어주는 태그 -->
+         <table style = "margin: auto; text-align: center;">
+            <tr>
+               <td>이름</td>
+               <td><%= name %>></td>   <!-- type="text"m속성은 텍스트를 입력받을 수 있는 입력란을 만든다는 의미 -->
+            </tr>
+            <tr>
+               <td>Java점수</td>
+               <td><%= java %></td>
+            </tr>
+            <tr>
+               <td>Web점수</td>
+               <td><%= web %></td>
+            </tr>
+            <tr>
+               <td>IoT점수</td>
+               <td><%= iot %></td>
+            </tr>
+            <tr>
+               <td>Android점수</td>
+               <td><%= android %></td>
+            </tr>
+            <tr>
+               <td>평균</td>
+               <td><%= sum %></td>
+            </tr>
+            <tr>
+               <td>학점</td>
+               <td><%= score %></td>
+            </tr>
+            
+         </table>      
+      </fieldset>
+   </form>
+  
+</body>
+</html>
+
+

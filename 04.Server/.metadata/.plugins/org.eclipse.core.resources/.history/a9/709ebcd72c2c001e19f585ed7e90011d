@@ -1,0 +1,23 @@
+package com.model;
+
+public class MessageDTO {
+	
+	private int num;
+	private String send_name;
+	private String receive_email;
+	private String content;
+	private String send_date;
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+}
+

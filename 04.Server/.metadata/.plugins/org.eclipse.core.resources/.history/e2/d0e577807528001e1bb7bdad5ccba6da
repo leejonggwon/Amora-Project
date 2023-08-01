@@ -1,0 +1,21 @@
+<%@ page language="java" contentType="text/html; charset=EUC-KR"
+    pageEncoding="EUC-KR"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+</head>
+<body>
+	<%-- 
+		ID, PW 두개의 정보를 받아와서
+		로그인 한다음
+		로그인 성공한사람의 닉네임 콘솔에 입력
+	
+	 --%>
+	
+
+
+
+</body>
+</html>

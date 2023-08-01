@@ -1,0 +1,56 @@
+package com;
+
+import java.io.IOException;
+import java.io.PrintWriter;
+
+import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+/**
+ * Servlet implementation class EX08Join
+ */
+@WebServlet("/EX08Join")
+public class EX08Join extends HttpServlet {
+	private static final long serialVersionUID = 1L;
+
+	/**
+	 * @see HttpServlet#service(HttpServletRequest request, HttpServletResponse response)
+	 */
+	protected void service(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+
+		
+		//아래/ 포스트방식은 url이 request 객체에 있기때문에 request에 인코딩을 해줘야한다  
+		request.setCharacterEncoding("EUC-KR");
+		
+		//아래/ 서블릿에 들어오는것에는 인코딩이 되었지만 브라우저에 들어오는것에는 인코딩이 되어 있지 않는다 
+		response.setCharacterEncoding("EUC-KR");
+		
+		PrintWriter out = response.getWriter(); // 웹페이지에 데이터를 출력하기 위해서 out객체가 필요하다 
+		
+		String id = request.getParameter("id");   // "id" 파라미터의 값을 가져와서 이를 문자열 변수 id에 저장합니다
+		out.print(id);                            // 웹페이                           
+		
+		String pw = request.getParameter("pw");
+		out.print(pw);
+		
+		String name = request.getParameter("name");
+		out.print(name);
+		
+		String email = request.getParameter("email");
+		out.print(email);
+		
+		String tel = request.getParameter("tel");
+		out.print(tel);
+		
+		String gender = request.getParameter("gender");
+		out.print(gender);
+		
+		String hobby = request.getParameter("hobby");
+		out.print(hobby);
+		
+	}
+
+}

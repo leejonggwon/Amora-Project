@@ -1,0 +1,20 @@
+<%@ page language="java" contentType="text/html; charset=EUC-KR"
+    pageEncoding="EUC-KR"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+</head>
+<body>
+<!-- include를 이용해서 "ex07menubar.jsp"를 포함시켜 사용한다 --> 
+    <%@ include file = "ex07menubar.jsp" %>
+    
+    <iframe src = "https://goo.gl/maps/A7FxgnJjaSdQNtraA" 
+     width="600" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+	 
+A
+
+
+</body>
+</html>

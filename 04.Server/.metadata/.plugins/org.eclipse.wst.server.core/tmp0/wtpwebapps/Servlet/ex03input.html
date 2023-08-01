@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+</head>
+<body>
+	<h2>하고싶은 말 입력하세요</h2>
+	<!-- 
+		데이터를 전송하기위한 3가지 조건 ★★★★★
+		1. action 이라는 값을 정해야한다 어디로 보낼지 정해야한다 // "Ex03Input"로 보낸다 
+		2. name 어떠한 데이터를 보내는지  // "talk" 데이터를 보낸다
+		3. submit 값을 보내는 시점  게이트가 submit버튼 눌러야 값이 넘어간다 -->
+	 
+	 <!-- form태그 속성
+	      action : 폼을 전송할 서버 쪽 스크립트 파일을 지정합니다 
+	      name : 폼을 식별하기 위한 이름을 지정합니다 -->
+	      								    <!-- input태그는 form태그에 감싸져야한다 -->
+	<form action = "Ex03Input">             <!-- Ex03Input 이라는 url값를 가진 서브측으로 내용들을 보낸다-->
+	   <input type = "text" name = "talk">  <!-- type = "text"은 텍스트입력 name은 변수와 같다--> 
+	   <input type = "submit" >             <!-- type = "submit" 서버전송버튼 -->
+    </form> 
+</body>
+</html>
+        <!-- input태그
+        text     텍스트입력
+        number   숫자입력
+        tel      전화번호 입력
+        checkbox 체크박스
+        button   버튼
+        month    사용자 지역 월
+        password 비밀번호 입력
+        url      url입력 
+        hidden   사용자에게 숨김
+        radio    라디오버튼
+        submit   서버전송버튼
+        date     사용자 지역 일 
+        email    이메일입력
+        search   검색상자
+        color    색상컨트롤
+        file     파일첨부버튼              
+        time     사용자 지역시간    
+        reset    리셋버튼    
+        -->
+ 
+                      
+                      
+                      

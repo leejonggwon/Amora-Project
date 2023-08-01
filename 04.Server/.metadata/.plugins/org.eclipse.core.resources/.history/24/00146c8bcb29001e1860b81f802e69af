@@ -1,0 +1,101 @@
+package com.model;
+
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+
+public class MemberDAO {
+	
+	
+	private Connection conn; 
+	private PreparedStatement psmt;
+	private ResultSet rs;
+	
+	//데이터베이스 연결메소드
+	public void getConnection() {  
+	
+	       try {
+			Class.forName("oracle.jdbc.driver.OracleDriver");
+		
+	          
+	       String db_url = "jdbc:oracle:thin:@localhost:1521:xe";
+	       String db_id = "shopping";
+	       String db_pw = "12345";
+	          
+	       conn = DriverManager.getConnection(db_url, db_id, db_pw);
+	       
+	       } catch (ClassNotFoundException e) {
+				e.printStackTrace();
+				System.err.println("ojdbc6.jar 또는 경로를 체크하세요");
+			} catch (SQLException e) {
+				e.printStackTrace();
+				System.err.println("DB에 필요한 정보가 맞는지 체크하세요");
+		}
+		
+	}	
+	
+	 //종료메소드
+	public void close() {  
+		try {
+		if(rs != null){
+	          rs.close();
+	       }
+		if(psmt != null){
+	          psmt.close();
+	       }
+	     if(conn != null){
+	          conn.close();
+	       }
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+	}
+	
+	
+	
+	//회원가입메소드
+	public void join(MemberDTO member) {
+		
+		getConnection();
+		
+		try {
+		String sql = "INSERT INTO VALUES(?,?,?,?,?,?,?)";
+		psmt = conn.prepareStatement(sql);
+		
+		}catch (SQLException e) {
+			e.printStackTrace();
+			
+		}finally {
+			
+			close();
+			
+		}
+		
+
+	}
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+}

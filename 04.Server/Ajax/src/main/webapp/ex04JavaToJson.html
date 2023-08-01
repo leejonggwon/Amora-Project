@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	
+	<div id="result-area"></div>
+	<button id="req-btn">데이터요청</button>
+	
+	<script src="./js/jquery-3.7.0.js"></script>
+	<script>
+		
+
+		
+		//1.클릭했을때 서버에 요청하여 제이슨 어레이데이터 받아오도록 구현
+		//2.받아온 데이터를 웹페이지에 출력해보기 
+		//아이디가 '리절트-어리어'인 div출력
+		
+		//table 태그홯용
+		$("#req-btn").on("click", function(){
+			
+			$.ajax({
+			
+				url: "JavaToJson",
+				
+				success: function(coffeeDTO){
+				
+					console.log(coffeeDTO);
+					
+					let resultHTML = "";
+					
+					for(let i=0; i<coffeeDTO.size(); i++){
+						
+						resultHTML += `<P> ${coffeeDTO.get(i)}</P>`;
+					}
+					
+					
+					$("#result-area").html(resultHTML);
+					
+					//$("#result-area").text(`${res.jsonObj1}/${res.jsonObj2}`);
+					
+				},
+					
+	
+																
+				
+				error:function(){
+					
+					alert("요청실패");
+				}
+											
+		});
+	
+		});
+	
+	
+	
+	</script>
+	
+</body>
+</html>

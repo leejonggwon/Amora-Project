@@ -1,0 +1,20 @@
+<%@ page language="java" contentType="text/html; charset=EUC-KR"
+    pageEncoding="EUC-KR"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+</head>
+<body>
+	<% 
+	
+	    // 서블리세에서 요청한 데이터 다 request에 있었다 
+		  
+		
+		
+		String text = request.getParameter("text");
+	%>
+
+</body>
+</html>

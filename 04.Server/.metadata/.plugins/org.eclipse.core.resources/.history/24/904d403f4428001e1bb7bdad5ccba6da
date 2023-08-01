@@ -1,0 +1,15 @@
+<%@ page language="java" contentType="text/html; charset=EUC-KR"
+    pageEncoding="EUC-KR"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+</head>
+<body>
+	<%@ include file="ex07member.jsp"%> <!--JSP 페이지의 속성을 설정하거나 지시하는데 사용됩니다.-->  
+	
+
+
+</body>
+</html>

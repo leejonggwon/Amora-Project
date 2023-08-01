@@ -1,0 +1,22 @@
+<!-- 지시자 -->
+<%@page import="java.util.Random"%>
+<%@ page language="java" contentType = "text/html; charset=EUC-KR"
+    pageEncoding="EUC-KR"%>
+<!--  contentType="text/html; charset=EUC-KR" 로 한글을 쓸 수 있다 
+	  이부분이 charset="EUC-KR"와 함께  
+	  response.setcontentType("text/html; charset = EUC-KR"); 이렇게 자바코드로 변환된다 
+	  지시자역할은 JSP가 서블릿으로 변환될때 필요한 언어들을 설정하는것 
+-->
+    
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+</head>
+<body>
+	오늘은 너무너무 행복한 월요일 입니다 ^^;
+	
+
+</body>
+</html>

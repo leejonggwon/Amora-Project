@@ -1,0 +1,23 @@
+<%@ page language="java" contentType="text/html; charset=EUC-KR"
+    pageEncoding="EUC-KR"%>
+    
+<%@ page errorPage="ex06error.jsp" %> <!-- 에러발생시 "ex06error.jsp"로 이동시키는 코드 -->
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+</head>
+<body>
+	<%
+		String name = "이종권";
+		int age = 36;
+		//int error = 15 / 0;
+		String phobeNumber = "010-4919-0328";
+		String info = "880328-1000000";
+		
+	%>
+
+	
+</body>
+</html>

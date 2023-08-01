@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        // 실습문제) 10개의 랜덤숫자를 저장하는 배열을 만든 후, 짝수의 개수를 출력해 보기!
+        // 결과형태) arr 에 저장된 짝수는 0,0,0,0,0 이고 총 0개 입니다 
+
+        // 1. 10개의 랜덤숫자를 가진 배열 생성하기
+        // 2. 반복문을 활용하여 짝수 판단하기
+        // 3. 짝수인 경우 카운팅하기
+
+
+        let arr = [];
+        let new_arr =[]; //짝수만 저장하는 배열
+        let cnt = 0;     // 짝수의 개수를 저장하는 변수 
+
+        for(let i = 0; i < 10; i++){
+            let num = parseInt(Math.random()*10)+1;
+            arr.push(num);   // 배열뒤에서 부터 값을 넣는다 
+        }
+
+        console.log(arr);
+
+        for(let i = 0; i < arr.length; i++){
+            if(arr[i] % 2 === 0){
+                new_arr.push(arr[i]);
+                cnt += 1;
+            }
+        }
+
+        console.log(new_arr);
+        console.log("arr에 저장된 짝수는 " + new_arr + " 이고 총 " + cnt + "개 입니다." );
+
+        // 탬플릿 문자열: 문자열과 변수를 +연산자 없이 함께 사용할 수 있는 문밥
+        // 형식: `문자열...${변수} 문자열...`
+        // - 문자열 데이터를 줄바꿈을 히더라도 오류가 발생하지 않는다 
+        console.log(`arr에 저장된 짝수는 ${new_arr} 이고 총 ${cnt}개 입니다.`);
+
+        /*
+        let num = parseInt(Math.random()*10)+1;
+
+        let arr = [];
+
+        let i = 0; 
+        while(true){
+            let num = parseInt(Math.random()*10)+1;
+
+            if(num % 2 === 0){
+                arr[i] = num;
+                i = i + 1
+                if (i === 9){
+                    break;
+                }
+            }
+        }
+        console.log("arr에 저장된 짝수는 " + arr + " 이고 총 " + (arr.length + 1) + "개 입니다" );
+        */
+    
+    </script>
+    
+</body>
+</html>

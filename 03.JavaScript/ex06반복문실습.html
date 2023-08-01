@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+       
+       
+       // 실습문제 - 업다운 프로그램 
+        // 0. 랜덤숫자를 생성한다 (Math.random()활용)
+        // 1. 사용자로 부터 숫자를 입력받는다.(prompt()활용)
+        // 2. 사용자가 입력한 숫자와 랜점숫자를 비교한다.
+        // 2-1. 사용자숫자 === 랜덤숫자 : "정답입니다!😊를 consol로 출력
+        // 2-2. 사용자숫자 > 랜덤숫자 : "입력한 숫자보다 작습니다. 😒"를 alert()로 출력"
+        // 2-3. 사용한숫자 < 랜덤숫자 : "입력한 숫자보다 큽니다. 😒를 alert()로 출력"
+        // 3. 정답을 맞출때 까지 비교한다.(while문 활용) 
+
+
+        // 랜덤숫지 생성하는 방법
+        // Math.random() : 0~1 사이의 랜덤한 실수데이터를 생성하는 함수 
+
+        
+       
+        let computer = parseInt(Math.random()*100)+1;
+
+        console.log("생성된 숫자:", computer);
+        
+        
+        while(true){
+
+            let input =parseInt(prompt(computer + "숫자를입력하세요."));   // 문자형이 나오므로 숫자형으로 변환과정 필요
+                             
+            if(input == computer){
+                console.log("정답입니다😊");
+                break;
+
+            }else if(input > computer){
+                alert("입력한 숫자보다 작습니다😒");
+
+            }else if(input < computer){
+                alert("입력한 숫자보다 큽니다😒");
+            }
+        }
+
+
+    </script>
+    
+
+
+
+</body>
+</html>

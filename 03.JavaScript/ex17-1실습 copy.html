@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <h1 id="tit"> 클릭을 한 번 해 볼까요?</h1>    <!-- id가 "tit"인 h1태그 --> 
+    <p id="link-text"></p>
+    <P id="list"></P>
+    
+
+    <button onclick = "h1Change()">클릭</button> <!-- 클릭박스-->
+
+    <button onclick = "createLink()">링크생성</button>
+    <button onclick = "createList()">목록생성</button>
+
+
+    <script>
+
+        // h1태그의 내용을 변경하는 함수
+        let h1Change = function(){                        // 클릭박스 클릭시 '클릭을 한 번 해 볼까요?'' 텍스트가 변경
+            const tit = document.getElementById("tit");   // <h1 id="tit"> 접근
+
+            tit.innerText = "변경완료";
+
+            // HTML태그 스타일 변경하는 방법
+            tit.style.color = "blue";             // 변경완료 Text 파란글자로 변경
+            tit.style.border = "1px solid blue";  // 테두리의 색깔
+            tit.style.background = "skyblue";     // 배경색깔
+        }
+
+
+
+        let createLink = function(){
+            const linkText = document.getElementById("link-text");
+            linkText.innerHTML = "<a href = 'https://www.naver.com'>네이버이동</a>"; // 링크생성 박스 클릭시 네이버로 이동하는 Text생성
+        }
+
+
+
+        let createList = function(){                              // 링크생성 박스 클릭시 리스트가 출력되는 함수 
+            const link = document.getElementById("list");
+
+
+            // for문을 이용한 리스트출력
+            let arr =["HTML", "CSS", "JavaScript"];
+            let resultHTML = "<ul>"; 
+
+                for(let i = 0; i <arr.length; i++){
+                    resultHTML += `<li>${arr[i]}</li>`;
+                }
+
+                resultHTML += "</ul>";
+                list.innerHTML = resultHTML;
+
+                
+            // list.innerHTML = `
+            //     <ul>
+            //         <li>HTML</li>
+            //         <li>CSS</li>
+            //         <li>JavaScript</li>
+            //     </ul>
+
+            // `;
+
+
+        }
+
+
+
+
+
+    </script>
+
+
+
+ 
+    
+   
+</body>
+</html>

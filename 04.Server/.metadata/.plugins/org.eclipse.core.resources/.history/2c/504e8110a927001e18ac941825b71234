@@ -1,0 +1,41 @@
+<%@ page language="java" contentType="text/html; charset=EUC-KR"
+    pageEncoding="EUC-KR"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+<style type = "text/css"> /* type="text/css"는 해당 스타일 시트가 CSS임을 나타냅니다 */
+
+/* CSS주석 */
+
+</style>
+<script type = "text/javascript">  
+    // type="text/javascript"는 해당 스크립트가 JavaScript임을 나타냅니다.
+	// js 주석
+</script>
+</head>
+
+
+<body>
+	<!--  각종 주석 설명 -->
+	<!--  HTML 주석 -->
+
+
+	<h1>오늘은 금요일</h1>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+

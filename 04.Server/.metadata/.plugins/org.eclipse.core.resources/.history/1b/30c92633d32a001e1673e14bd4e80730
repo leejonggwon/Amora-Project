@@ -1,0 +1,75 @@
+<%@page import="java.net.URLEncoder"%>
+<%@page import="java.sql.ResultSet"%>
+<%@page import="java.sql.SQLException"%>
+<%@page import="java.sql.Connection"%>
+<%@page import="java.sql.DriverManager"%>
+<%@page import="java.sql.PreparedStatement"%>
+<%@ page language="java" contentType="text/html; charset=EUC-KR"
+	pageEncoding="EUC-KR"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+</head>
+<body>
+	<%--
+      ID, PW 두개의 정보를 받아와서
+      로그인을 한다음 
+      로그인 성공한 사람의 닉네임 콘솔에 출력
+    --%>
+	<%
+	request.setCharacterEncoding("EUC-KR");
+
+	//넘어온 데이터를 기준을 jdbc를 통해 테이블에 값 넣기(회원가입)
+	//id, pw, nick, email, phone, gender, age      
+	String id = request.getParameter("id");
+	String pw = request.getParameter("pw");
+
+	String nick = null;
+	// jdbc 순서
+	// 1.드라이버 동적로딩
+	Class.forName("oracle.jdbc.driver.OracleDriver");
+	// 2.커넥션 연결
+	String db_url = "jdbc:oracle:thin:@localhost:1521:xe";
+	String db_id = "shopping";
+	String db_pw = "12345";
+
+	Connection conn = DriverManager.getConnection(db_url, db_id, db_pw);
+	// 3.sql문 실행
+	String sql = "select * from member where id = ? and pw = ?";
+
+	PreparedStatement psmt = conn.prepareStatement(sql); //sql문 검사후 psmt에 넣어준다
+
+	psmt.setString(1, id);
+	psmt.setString(2, pw);
+
+	psmt.executeUpdate(); //실행
+
+	ResultSet rs = psmt.executeQuery(); // 커서가 속성값에서 아래 한행을 내려올수 있을때 
+								// 쿼리문 행이 생성 되었다는 뜻이므로 로그인 성공                              
+	if (rs.next()) {
+		nick = rs.getString("NICK"); //오버로딩으로 숫자도 가능
+	}
+	// 4.연결종료
+	if (rs != null) {
+		rs.close();
+	}
+	if (psmt != null) {
+		psmt.close();
+	}
+	if (conn != null) {
+		conn.close();
+	}
+
+	if (nick != null) {
+		nick = URLEncoder.encode(nick, "EUC-KR");
+		response.sendRedirect("loginSuccess.jsp?nick=" + nick);
+	} else {
+		response.sendRedirect("login.jsp");
+	}
+	//로그인 성공시 loginSuccess.js
+	//로그인 실패시 login.jsp
+	%>
+</body>
+</html>

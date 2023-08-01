@@ -1,0 +1,12 @@
+h1{
+    color : red;
+
+}
+
+p{
+    color :blue;
+}
+
+body{
+    background-color: yellow;  /*body의 배경색을 노랑색으로 */
+}

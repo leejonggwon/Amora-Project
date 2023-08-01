@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>댓글 표시 예시</title>
+    <style>
+        /* 댓글 스타일 */
+        .comment {
+            border: 1px solid #ccc;
+            padding: 10px;
+            margin-bottom: 10px;
+            border-radius: 4px;
+        }
+    </style>
+</head>
+<body>
+    <h2>댓글</h2>
+
+    <!-- 댓글 입력 폼 -->
+    <div>
+        <input type="text" id="commentInput" placeholder="댓글을 입력하세요...">
+        <button onclick="addComment()">댓글 작성</button>
+    </div>
+
+    <!-- 댓글 표시 영역 -->
+    <div id="commentArea">
+        <!-- 이곳에 댓글이 동적으로 추가됩니다. -->
+    </div>
+
+    <script>
+        // 댓글을 저장할 배열
+        let comments = [];
+
+        // 댓글을 추가하는 함수
+        function addComment() {
+            const commentInput = document.getElementById('commentInput');
+            const commentText = commentInput.value;
+            if (commentText.trim() === '') {
+                alert('댓글을 입력하세요.');
+                return;
+            }
+
+            comments.push(commentText);
+            commentInput.value = '';
+
+            updateComments();
+        }
+
+        // 댓글을 화면에 표시하는 함수
+        function updateComments() {
+            const commentArea = document.getElementById('commentArea');
+            commentArea.innerHTML = '';
+
+            comments.forEach((comment) => {
+                const commentDiv = document.createElement('div');
+                commentDiv.className = 'comment';
+                commentDiv.textContent = comment;
+                commentArea.appendChild(commentDiv);
+            });
+        }
+    </script>
+</body>
+</html>

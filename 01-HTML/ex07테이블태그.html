@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- 
+        table태그 web에서 표형태의 화면을 만들때 사용
+        tr(table row)태그 - table 태그 안에서 행을 의미
+        td(table data)태그 table태그 안에서 열을 의미
+    -->
+
+    <table border="1px solid black">   <!-- border 테두리 = "1px solid 직선 red" -->
+                                                                           
+        <tr1>
+            <td>번호</td>
+            <td>음식</td>
+            <td>가격</td>
+            <td>개수</td>
+        </tr1>
+
+        <tr>
+            <td>1번</td>
+            <td>육회</td>
+            <td>33,000원</td>
+            <td rowspan = "2">5개</td>  <!-- rowspan = "2" 2개의 행병합 할때 사용한다 -->
+        </tr>
+
+        <tr>
+            <td>2번</td>
+            <td>치킨</td>
+            <td>30,000원</td>
+     
+        </tr>
+
+        <tr>
+            <td>3번</td>
+            <td>족발</td>
+            <td colspan = "2">38,000원</td>  <!-- colspan ="2" 2개의 열병합-->
+            
+        </tr>
+
+    </table>
+
+<br>
+<br>
+
+
+    <table border="1px solid blue">
+        <tr>
+            <td>번호</td>
+            <td>이름</td>
+            <td>성별</td>
+            <td>지역</td>
+        </tr>
+
+        <tr>
+            <td>1번</td>
+            <td>홍승찬</td>
+            <td>남자</td>
+            <td>일산</td>
+        </tr>
+
+
+        <tr>
+            <td>2번</td>
+            <td>홍의연</td>
+            <td>남자</td>
+            <td>일산</td>
+        </tr>
+
+        
+        <tr>
+            <td>3번</td>
+            <td>이종권</td>
+            <td>남자</td>
+            <td>광주</td>
+        </tr>
+
+
+    </table>
+    
+<br>
+<br>
+
+    <table border="1px solid blue">
+        <tr>
+            <td>번호</td>
+            <td>이름</td>
+            <td>성별</td>
+            <td>지역</td>
+        </tr>
+
+    
+    </table>
+
+
+
+
+</body>
+</html>

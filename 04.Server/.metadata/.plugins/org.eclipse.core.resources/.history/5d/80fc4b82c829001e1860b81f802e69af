@@ -1,0 +1,27 @@
+package com.model;
+
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+
+public class MemberDAO {
+	
+	
+	private Connection conn; 
+	private PreparedStatement psmt;
+	private ResultSet rs;
+	
+	public void getConnection() {  //연결메소드
+		
+	}	
+	
+	public void close() {  //종료메소드
+		
+	}
+	
+	public void join() {  //종료메소드
+		
+	}
+	
+	
+}

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let fruits = ["apple", "avocado", "banana", "blueberry", "cherry", 
+    "dragon fruit", "fig", "grape", "kiwi", "lime", 
+    "mango", "orange", "oriental melon", "pear",
+    "peach", "pineapple", "shine muscat", "strawberry", "tomato", 
+   "water melon", "yuja"];
+
+
+   fruits.pop();
+   console.log();
+
+   fruits[20] = "grapefruit";
+   // fruit.push("grapefruit")
+   console.log(fruits);
+
+   // push()는 한 개 이상의 데이터를 추가 할 수 없다.
+   fruits.push("cherry tomato", "pine nut", "korean blackberry")
+   console.log(fruits);
+
+   // orange가 있는지 체크
+   console.log(fruits.includes("orange"));
+   console.log(fruits.includes("kiwi"));
+
+   // 인배열 내 데이터의 위치(인덱스)를 찾는 방법
+   let index = fruits.indexOf("water melon");  // water melon의 위치를 index에 넣는다  
+   console.log(index);                         // console.log(19);
+
+   fruits[index] = "melone";                   // fruits[19] = "melone";
+   console.log(fruits);
+
+   let index2 = fruits.indexOf("lime");
+   console.log(index2);
+   console.log(index2, 3);
+   console.log(fruits);
+
+
+   let index3 = fruits.indexOf("shine muscat");
+   fruits.splice(index3);  // 모든데이터 삭제
+   console.log(fruits);
+
+   let srartIndex = fruits.indexOf("pear");    // srartIndex 지정
+   let endIndex = fruits.indexOf("pineapple"); // endIndex 지정
+   let new_fruits = fruits.slice(srartIndex, endIndex +1); 
+   console.log(new_fruits);
+
+
+
+
+    </script>
+    
+    
+   
+
+</body>
+</html>

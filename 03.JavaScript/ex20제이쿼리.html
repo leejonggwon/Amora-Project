@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <h1 id=" "tit"> jQuery</h1>
+
+    <!-- 제이쿼리 파일 불러오기-->
+    <script src="./js/jquery-3.7.0.js"></script>  <!--src="./js/jquery-3.7.0.js" 자바스크립트 파일을 불러오는 역할-->
+    <script>
+        // 제이쿼리 문법: $(달러가 제이쿼리객체를 의미한다)
+        // document.getElementsByTagName("h1") 을 $("h1")으로 간단하게 작성할 수 있다  
+        // $("h1") // 선택자로 인식한다  
+        // $(CSS선택자) : 선택자에 해당하는 모든 HTML객체를 배열형태로 반환하는 함수 
+
+        const $h1Tag = $("h1");
+        //const $h1Tag = $("#tit");  //h1에 id가 있으면 id를 입력하면 된다
+
+        console.log($h1Tag);
+
+
+        // h1태그의 내용접근하는 함수 
+        // 자바스크립트에서 사용자에 접근하는 : innerText , innerHtml
+        console.log($h1Tag.text());  //text라는 함수로 제공한다 
+        console.log($h1Tag.html());
+
+
+        //h1태그의 내용을 변경하고자 할때 
+        $h1Tag.text("변경성공!"); //매개변수를 넣어주면 태그의 내용이 바뀐다 // 텍스는 태그가 적용이 안된다 
+        //$h1Tag.html("<a href='#'>변경성공!</a>")
+
+        //h1태그 스타일변경하는 함수 
+        $h1Tag.css({
+            color : "green",              // key:value 형태 // 객체형태
+            backgroundColor : "yellow"
+        });
+
+        //h1태그 이벤트 적용하는 함수  // 모드테그에 적용할 수 있는 이벤트
+        $h1Tag.on("click", function(){
+            alert("클릭이벤트 실행!");
+
+        });
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        /*
+        아이디 선택자와 클래스선택자
+        - 특정요소(태그)에다가 디자인을 주고 싶을 때 사용한다 */
+
+        #apple{                 /*아이디선택자 */
+            color : red;      /*아이디가 apple인 <h1>은 빨간색으로 변경되었다 */
+        }
+        #banana{
+            color :yellow;
+            font-size: 60px;
+        }
+        #blue{
+            color : blue;
+        }
+        #kiwi{
+            color : gold ;
+        }
+
+       /* 
+       아이디 선택자
+       : #기호호 표시되면 특정한 요소 선택
+       HTML구조의 공간분할을 적용할때 사용된다 
+        */
+       
+       /*
+       클래스의 선택자  
+       : 마침표(.) 기호로 표시되며 특정한 요소 선택
+       공통되는 스타일을 적용할 경우 
+       중복되는 요소가 많을 때는 클래스 선택자가 쓰인다*/
+
+
+
+        .apple{
+            color : palevioletred;
+            font-size: 30px;
+        }
+        .banana{
+            color:darkgreen ;
+        }
+
+        .blue{
+            color : blueviolet;
+        }
+        .kiwi{
+            color : green ;
+            
+           
+        }
+        .text{
+            font-size: 30px;
+
+        }
+
+
+    </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+
+    <h1 id ="apple">사과</h1>        <!-- 아이디선택자 : h1 각각에 id를 주어서 각각 디자인을 적용한다-->
+   
+    <h1 id ="banana">바나나</h1>
+
+    <h1 id = "blue">블루베리</h1>
+
+    <h1 id="kiwi" >키위</h1>
+
+
+<br>  <!-- 띄어쓰기-->
+<br>
+
+
+    <ul>
+        <li class ="apple" >사과</li>      <!-- 클래스선택자-->
+
+        <li class ="banana" >바나나</li>
+        
+        <li class="blue" >블루베리</li>
+        
+        <li class="kiwi text" >키위</li>    <!-- 키위에는 text키워드도 넣은것처럼 하나의 요소에 클래스를 2개 이상 줄 수 도 있다  -->
+    </ul>
+    
+
+</body>
+</html>

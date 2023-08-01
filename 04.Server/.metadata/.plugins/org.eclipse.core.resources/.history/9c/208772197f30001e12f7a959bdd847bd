@@ -1,0 +1,19 @@
+<%@ page language="java" contentType="text/html; charset=EUC-KR"
+    pageEncoding="EUC-KR"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+</head>
+<body>
+<!-- include를 이용해서 "ex07menubar.jsp"를 포함시켜 사용한다 --> 
+    <%@ include file = "ex07menubar.jsp" %>
+    
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3161.6604808673546!2d126.97262231608447!3d37.586611830734384!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x357ca2b7ef94a16b%3A0xb16d5f135eaaddc!2z7LKt7JmA64yA!5e0!3m2!1sko!2skr!4v1588826305729!5m2!1sko!2skr" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+	 
+	
+
+
+</body>
+</html>

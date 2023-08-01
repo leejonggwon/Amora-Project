@@ -1,0 +1,77 @@
+<%@ page language="java" contentType="text/html; charset=EUC-KR"
+    pageEncoding="EUC-KR"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>My Website</title>
+</head>
+<body>
+ 
+    
+
+
+    <!-- Header -->
+
+    <!-- Navigation -->
+    <nav>
+        <ul>
+            <li><a href="#community">Community</a></li>
+            <li><a href="#second-hand">Second-Hand Trading</a></li>
+            <li><a href="#joint-trading">Joint Trading</a></li>
+            <li><a href="#promotion">Promotion</a></li>
+            <li><a href="#notice">Notice</a></li>
+            <li><a href="#my-page">My Page</a></li>
+        </ul>
+    </nav>
+
+    <!-- Content Section - Community -->
+    <section id="community">
+        <h2>Community</h2>
+        <!-- Add your community content here -->
+    </section>
+
+    <!-- Content Section - Second-Hand Trading -->
+    <section id="second-hand">
+        <h2>Second-Hand Trading</h2>
+        <!-- Add your second-hand trading content here -->
+    </section>
+
+    <!-- Content Section - Joint Trading -->
+    <section id="joint-trading">
+        <h2>Joint Trading</h2>
+        <!-- Add your joint trading content here -->
+    </section>
+
+    <!-- Content Section - Promotion -->
+    <section id="promotion">
+        <h2>Promotion</h2>
+        <!-- Add your promotion content here -->
+    </section>
+
+    <!-- Content Section - Notice -->
+    <section id="notice">
+        <h2>Notice</h2>
+        <!-- Add your notice content here -->
+    </section>
+
+    <!-- Content Section - My Page -->
+    <section id="my-page">
+        <h2>My Page</h2>
+        <!-- Add your my page content here -->
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>Contact us at: contact@example.com</p>
+    </footer>
+
+</body>
+</html>
+
+
+
+
+
+
+

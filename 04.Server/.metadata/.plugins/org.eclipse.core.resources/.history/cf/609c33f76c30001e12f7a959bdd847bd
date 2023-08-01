@@ -1,0 +1,17 @@
+<%@ page language="java" contentType="text/html; charset=EUC-KR"
+    pageEncoding="EUC-KR"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+</head>
+<body>
+<!-- include 디렉티브는 다른 JSP 파일을 현재 JSP 페이지에 포함시키는데 사용됩니다 --> 
+    <%@ include file = "ex07menubar.jsp" %>
+	 
+	
+
+
+</body>
+</html>

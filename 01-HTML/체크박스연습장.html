@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>커스텀 메시지 박스 예시</title>
+    <style>
+        /* 메시지 박스 스타일 */
+        .message-box {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: #f9f9f9;
+            border: 1px solid #ccc;
+            padding: 20px;
+            border-radius: 4px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+            width: 300px;
+            text-align: center;
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <h2>커스텀 메시지 박스 예시</h2>
+
+    <!-- 버튼을 클릭하여 메시지 박스 표시 -->
+    <button onclick="showMessageBox()">메시지 박스 표시</button>
+
+    <!-- 메시지 박스 -->
+    <div class="message-box" id="messageBox">
+        <p>구매신청이 완료되었습니다!</p>
+        <p>결제안내사항은 등록하신 휴대폰에 발송되었습니다 확인 부탁드립니다.
+        </p>
+        <button onclick="hideMessageBox()">확인</button>
+    </div>
+
+    <script>
+        // 메시지 박스 표시 함수
+        function showMessageBox() {
+            document.getElementById('messageBox').style.display = 'block';
+        }
+
+        // 메시지 박스 숨기기 함수
+        function hideMessageBox() {
+            document.getElementById('messageBox').style.display = 'none';
+        }
+    </script>
+</body>
+</html>

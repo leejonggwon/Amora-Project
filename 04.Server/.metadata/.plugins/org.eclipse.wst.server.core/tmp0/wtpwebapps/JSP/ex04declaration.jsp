@@ -1,0 +1,39 @@
+<%@ page language="java" contentType="text/html; charset=EUC-KR"
+    pageEncoding="EUC-KR"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+</head>
+<body>
+	<%--
+		선언문은
+		JSP안에서 필드(전역변수, 멤버변수) 또는 메소드를 만들고 싶을때 사용한다
+	 --%>
+	 
+	 <%! //선언문//변수와 메소드를 선언함
+	 	 //전역변수는 접근제한자를 단다//그리고 필드로 간다
+	 	 public String name = "박병관"; 
+	 	
+	 	 //선언문안에서 메소드를 만들수 있다 //메소스와 필드는 선언문에서만 가능하다 
+	 	 public int plus(int num1, int num2){
+	 	 	return num1 + num2;
+	 	 }	 
+	 %>
+	 
+	 
+	 <% //스크립트릿//자바코드를 기술함//스크립트릿에 작성되는 코드는 다 service메소드로 들어간다
+	 	//지역변수는 접근제한자를 달 수 없다 
+	    String name2 = "조준용";
+	 %>
+	
+	 
+	 <%= // 표현식에서는 단순히 자바값을 꺼낼수도 있지만
+	 	 //	return값이 존재하는 함수, 메소드를 사용할 수 있다 
+	 	 // 표현식에서는 세미콜론을 쓰지 않는다 
+	 	 plus(30,40)  
+	 %>
+
+</body>
+</html>

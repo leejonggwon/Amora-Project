@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //Date 내장객체 실습
+
+        //let date = new Date();
+
+        let date = new Date("2023-07-20"); // 문자열로 날짜에 대한 정의 해서 별도로 가져오게 된다 
+                                           // Thu Jul 20 2023 09:00:00 GMT+0900 (한국 표준시)
+
+        
+        console.log(date); // Sun Jul 16 2023 15:52:07 GMT+0900 (한국 표준시)
+
+
+        let year = date.getFullYear();
+        let month = date.getMonth()+1; //숫자가 0부터 시작하므로 +1연산을 해줘야한다 
+        let day = date.getDate();
+
+        console.log(`${year}년 ${month}월 ${day}일 `); // 2023년 7월 16일 
+        
+
+
+        let hour = date.getHours();
+        let minute = date.getMinutes();
+        let seconds = date.getSeconds();
+
+
+        console.log(`${year}년 ${month}월 ${day}일 `);      // 2023년 7월 16일 
+        console.log(`${hour}시 ${minute}분 ${seconds}초 `); // 15시 55분 27초 
+
+        // console.log(date);
+
+
+
+    </script>
+</body>
+</html>

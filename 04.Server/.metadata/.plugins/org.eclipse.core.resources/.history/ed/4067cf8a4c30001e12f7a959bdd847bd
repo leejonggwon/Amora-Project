@@ -1,0 +1,25 @@
+<%@ page language="java" contentType="text/html; charset=EUC-KR"
+    pageEncoding="EUC-KR"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+</head>
+<body>
+    
+    <!-- ***** include는 외부에 있는 페이지를 내꺼안에 포함시키는거다 
+	     home.jsp 에서 내가 만들어낸것을 불러다가 쓸 수 있다  -->
+	<%@ include file ="ex07menubar.jsp"%> 
+	
+	
+	<iframe src= "ex07menubar.jsp"></iframe>
+	<!-- iframe은 단순히 보여주는것입니다  -->
+	<!-- include는 코드를 내거에다가 적용시키는것 입니다 
+	     그래서 가져다가 제어 할 수 가 없다-->
+	
+	
+
+
+</body>
+</html>

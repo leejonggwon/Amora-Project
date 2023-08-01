@@ -1,0 +1,17 @@
+<%@ page language="java" contentType="text/html; charset=EUC-KR"
+    pageEncoding="EUC-KR"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+</head>
+<body>
+<!-- include를 이용해서 "ex07menubar.jsp"를 불러다 사용한다 --> 
+    <%@ include file = "ex07menubar.jsp" %>
+	 
+	
+
+
+</body>
+</html>

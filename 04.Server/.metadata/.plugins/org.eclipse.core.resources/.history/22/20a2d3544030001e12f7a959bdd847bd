@@ -1,0 +1,16 @@
+<%@page import="java.util.Random"%>
+<%@ page language="java" contentType = "text/html; charset=EUC-KR"
+    pageEncoding="EUC-KR"%> <!-- contentType="text/html; charset=EUC-KR" 지시자 때문에 한글을 쓸 수 있다 -->
+    
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+</head>
+<body>
+	
+	
+
+</body>
+</html>

@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+    .center {
+      background-color: gray;
+    }
+
+    .personal {
+      background-color: whitesmoke;
+    }
+    .detail {
+        text-align: right;  
+    }
+        
+    </style>
+</head>
+<body>
+    <form>
+
+        <table  width = "400px" >
+            <tr class="center" >
+                <td  colspan ="4" height="50px" ><b>Step1 : 아이디 / 비번 입력</b></td>
+            </tr>
+    
+            <tr class="personal" height = "35px">
+                <td class="detail"> 아이디 : </td>
+                <td> <input type= "text" >  </td>  
+            </tr>
+    
+            <tr class="personal" height = "35px">
+                <td class="detail" >비밀번호 : </td>
+                <td> <input type = "password" > </td>
+            </tr>
+    
+            <tr class="personal" height = "35px">
+                <td class="detail" >비밀번호 확인 : </td>
+                <td> <input type = "password" > </td>
+            </tr>
+    
+        </table>
+
+
+        <table  width = "400px" >
+            <tr>
+                <td class="center" colspan ="4" height="50px" ><b>Step2 : 개인정보</b></td>
+            </tr>
+    
+            <tr class="personal" height = "35px">
+                <td class="detail" > 성별 : </td>
+                <td> 남 <input type = "radio" name ="gender"> 
+                     여 <input type = "radio" name ="gender">   </td>  
+            </tr>
+    
+            <tr class="personal" height = "35px">
+                <td class="detail" >혈액형 : </td>
+                <td> 
+                    <select>
+                    <option>A형</option> 
+                    <option>B형</option> 
+                    <option>AB형</option> 
+                    <option>O형</option> 
+                    </select>     
+                </td>
+            </tr >
+    
+            <tr class="personal" height = "35px">
+                <td class="detail" >생일 : </td>
+                <td> <input type = "date">  </td>
+            </tr>
+    
+        </table>
+
+        <table  width = "400px" >
+            <tr class="center">
+                <td colspan ="4" height="50px" ><b>Step3 : 선호도</b></td>
+            </tr>
+    
+            <tr class="personal" height = "35px">
+                <td class="detail" > 취미 : </td>
+                <td> 축구 <input type = "checkbox">
+                     야구 <input type = "checkbox">
+                     농구 <input type = "checkbox">   </td>  
+            </tr>
+    
+            <tr class="personal" height = "35px">
+                <td class="detail" > 좋아하는 색깔 : </td>
+                <td> 
+                    <input type = "color">   
+                </td>
+            </tr height = "35px">
+    
+            
+    
+        </table>
+
+        <table  width = "400px" >
+            <tr class="center">
+                <td colspan ="4" height="50px" ><b>b>Step4 : 적고 싶은 말</b></td>
+            </tr>
+    
+            <tr class="personal" height = "35px">
+               
+                <td>  <textarea rows = "10" cols = "50"></textarea></td>  
+            </tr>
+    
+           
+            
+    
+        </table>
+
+
+    
+    </form>
+    
+
+
+
+    
+</body>
+</html>

@@ -1,0 +1,105 @@
+<%@ page language="java" contentType="text/html; charset=EUC-KR"
+    pageEncoding="EUC-KR"%>
+<!DOCTYPE html>
+<html>
+<head>
+    <title>My Website</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+        }
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 10px;
+            text-align: center;
+        }
+        nav {
+            background-color: #555;
+            padding: 10px;
+            display: flex;
+            justify-content: center;
+        }
+        nav ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+        nav li {
+            display: inline-block;
+            margin: 5px;
+            background-color: #777;
+            padding: 5px 15px;
+        }
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 18px;
+        }
+        nav a:hover {
+            background-color: #888;
+        }
+        section {
+            padding: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header -->
+    <header>
+        <h1>Welcome to My Website</h1>
+    </header>
+
+    <!-- Navigation -->
+    <nav>
+        <ul>
+            <li><a href="#community">Community</a></li>
+            <li><a href="#second-hand">Second-Hand Trading</a></li>
+            <li><a href="#joint-trading">Joint Trading</a></li>
+            <li><a href="#promotion">Promotion</a></li>
+            <li><a href="#notice">Notice</a></li>
+            <li><a href="#my-page">My Page</a></li>
+        </ul>
+    </nav>
+
+    <!-- Content Section - Community -->
+    <section id="community">
+        <h2>Community</h2>
+        <!-- Add your community content here -->
+    </section>
+
+    <!-- Content Section - Second-Hand Trading -->
+    <section id="second-hand">
+        <h2>Second-Hand Trading</h2>
+        <!-- Add your second-hand trading content here -->
+    </section>
+
+    <!-- Content Section - Joint Trading -->
+    <section id="joint-trading">
+        <h2>Joint Trading</h2>
+        <!-- Add your joint trading content here -->
+    </section>
+
+    <!-- Content Section - Promotion -->
+    <section id="promotion">
+        <h2>Promotion</h2>
+        <!-- Add your promotion content here -->
+    </section>
+
+    <!-- Content Section - Notice -->
+    <section id="notice">
+        <h2>Notice</h2>
+        <!-- Add your notice content here -->
+    </section>
+
+    <!-- Content Section - My Page -->
+    <section id="my-page">
+        <h2>My Page</h2>
+        <!-- Add your my page content here -->
+    </section>
+
+</body>
+</html>

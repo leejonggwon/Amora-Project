@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>간단한 채팅 애플리케이션</title>
+</head>
+<body>
+    <h1>간단한 채팅 애플리케이션</h1>
+    <div id="chat-box" style="height: 500px; overflow-y: scroll; border: 2px solid #ccc;"></div>
+    <input type="text" id="message" placeholder="메시지를 입력하세요">
+    <button onclick="sendMessage()">보내기</button>
+
+    <script>
+        function sendMessage() {
+            var messageInput = document.getElementById("message");
+            var message = messageInput.value;
+            if (message.trim() !== "") {
+                var chatBox = document.getElementById("chat-box");
+                chatBox.innerHTML += "<p><strong>[인공지능사관학교] </strong> " + message + "</p>";
+                messageInput.value = "";
+                chatBox.scrollTop = chatBox.scrollHeight; // 스크롤 맨 아래로 이동
+            }
+        }
+
+        // 엔터 키로 메시지 보내기
+        document.getElementById("message").addEventListener("keypress", function (event) {
+            if (event.keyCode === 13) {
+                sendMessage();
+            }
+        });
+    </script>
+</body>
+</html>

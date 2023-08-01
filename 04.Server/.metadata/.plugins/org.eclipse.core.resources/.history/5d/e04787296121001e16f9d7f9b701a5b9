@@ -1,0 +1,92 @@
+package com;
+
+import java.io.IOException;
+import java.io.PrintWriter;
+
+import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+/**
+ * Servlet implementation class Ex07RadioCheckBox
+ */
+@WebServlet("/Ex08Join")
+public class Ex08Join extends HttpServlet {
+	private static final long serialVersionUID = 1L;
+
+	/**
+	 * @see HttpServlet#service(HttpServletRequest request, HttpServletResponse response)
+	 */
+	protected void service(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		// TODO Auto-generated method stub
+		
+		request.setCharacterEncoding("EUC-KR");
+		response.setCharacterEncoding("EUC-KR");
+		
+		
+	
+		
+		
+		String id = request.getParameter("id");
+		String pw = request.getParameter("pw");
+		String name = request.getParameter("name");
+		String email = request.getParameter("email");
+		String tel = request.getParameter("tel");
+		
+		String gender = request.getParameter("gender");
+		String[] hobby = request.getParameterValues("hobby");
+		
+		String birthday = request.getParameter("birthday");
+		String color = request.getParameter("color");
+		
+						
+		String country = request.getParameter("country");
+		String text = request.getParameter("text");
+		
+		
+		PrintWriter out = response.getWriter();
+		   
+		
+		out.print("<html>");
+		out.print("<body>");
+		
+		
+		
+		
+		out.print("<h1> ID : " + id + "</h1>");
+		out.print("<h1> NAME : "  + name + "</h1>");
+		out.print("<h1> EMAIL : " + email + "</h1>");
+		out.print("<h1> TEL : " + tel + "</h1>");
+		
+		
+		out.print("<h1> GENDER : " + gender + "</h1>");
+		
+		String hobbys ="";
+        for(int i = 0; i < hobby.length; i++) {
+			
+			hobbys= hobbys + hobby[i];		
+		}		
+		
+        
+        out.print("<h1> BIRTH : " + birthday + "</h1>");
+       
+        
+        out.print("<h1> COUNTRY : " + country + "</h1>");
+        out.print("<h1> COLOR : " + color + "</h1>");
+        out.print("<h1> HOBBY : " + hobbys + "</h1>");
+        out.print("<h1> TALK: " + text + "</h1>");
+		
+		
+		                      
+        
+        
+        
+		out.print("</body>");
+		out.print("</html>");			
+		
+		
+		
+	}
+}

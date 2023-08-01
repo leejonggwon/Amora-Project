@@ -1,0 +1,76 @@
+package com.model;
+
+public class MemberDTO {
+	// DTO의 역활은 데이터베이스 정보를 자바에서 묶어서 관리하는것
+	// 묶여진 데이터를 주고받기위한 용도로 사용하는것 
+	
+	 private String id ;
+	 private String pw ;
+	 private String nick ;
+	 private String email ;
+	 private String phone;
+	 private String gender;
+	 private int age ;
+	 
+	 
+	 // 필드변수를 정의하셨으면 초기화를 해주기위한 생성자가 필요하다
+	public MemberDTO(String id, String pw, String nick, String email, String phone, String gender, int age) {
+	
+		this.id = id;
+		this.pw = pw;
+		this.nick = nick;
+		this.email = email;
+		this.phone = phone;
+		this.gender = gender;
+		this.age = age;
+	}
+
+	
+	public MemberDTO(String pw, String email) {
+		super();
+		this.pw = pw;
+		this.email = email;
+	}
+
+	// getter메소드를 만들어야한다 
+	public String getId() {
+		return id;
+	}
+
+
+	public String getPw() {
+		return pw;
+	}
+
+
+	public String getNick() {
+		return nick;
+	}
+
+
+	public String getEmail() {
+		return email;
+	}
+
+
+	public String getPhone() {
+		return phone;
+	}
+
+
+	public String getGender() {
+		return gender;
+	}
+
+
+	public int getAge() {
+		return age;
+	}   
+     
+	
+	
+	
+	
+	
+	
+}

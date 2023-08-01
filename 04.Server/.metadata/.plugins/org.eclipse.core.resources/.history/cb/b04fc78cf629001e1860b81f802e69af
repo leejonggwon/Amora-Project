@@ -1,0 +1,36 @@
+public ArrayList<MemberDTO> select(){
+      
+      ArrayList<MemberDTO> list = new ArrayList<>();
+      
+      getConnection();
+      
+      String sql = "SELECT * FROM MEMBER";
+      
+      try {
+         psmt = conn.prepareStatement(sql);
+         
+         rs = psmt.executeQuery();
+         
+         while(rs.next()){
+            String id = rs.getString("id");
+            String pw = rs.getString("pw");
+            String nick = rs.getString("nick");
+            String email = rs.getString("email");
+            String phone = rs.getString("phone");
+            String gender = rs.getString("gender");
+            int age = rs.getInt("age");
+            
+            MemberDTO dto = new MemberDTO(id, pw, nick, email, phone, gender, age);
+            list.add(dto);
+            
+         }
+         
+      } catch (SQLException e) {
+         // TODO Auto-generated catch block
+         e.printStackTrace();
+      } finally {
+         close();
+      }
+      
+      return list;
+   }

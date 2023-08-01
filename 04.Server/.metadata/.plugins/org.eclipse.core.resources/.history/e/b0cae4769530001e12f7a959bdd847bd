@@ -1,0 +1,136 @@
+<%@ page language="java" contentType="text/html; charset=EUC-KR"
+    pageEncoding="EUC-KR"%>
+<!DOCTYPE html>
+<html>
+<head>
+    <title>My Website</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+        }
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 10px;
+            text-align: center;
+        }
+        nav {
+            background-color: #555;
+            padding: 10px;
+            display: flex;
+            justify-content: center;
+        }
+        nav ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+        nav li {
+            display: inline-block;
+            margin: 5px;
+            background-color: #777;
+            padding: 5px 15px;
+        }
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 18px;
+        }
+        nav a:hover {
+            background-color: #888;
+        }
+        section {
+            padding: 20px;
+        }
+        /* 게시판 테이블 스타일 */
+        table {
+            width: 80%;
+            border-collapse: collapse;
+            margin: 20px auto;
+        }
+        th, td {
+            padding: 10px;
+            text-align: center;
+        }
+        th {
+            background-color: #ccc;
+        }
+        td {
+            background-color: #f2f2f2;
+        }
+        /* 검색칸 스타일 */
+        .search-container {
+            text-align: center;
+            margin: 20px auto;
+        }
+        .search-container input[type="text"] {
+            width: 300px; /* 검색칸 넓이 설정 (예시로 300px 지정) */
+            padding: 5px;
+            font-size: 16px;
+        }
+        .search-container input[type="submit"] {
+            padding: 5px 20px;
+            font-size: 16px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <h1>AMORA 아파트</h1>
+    </header>
+
+    <!-- Navigation -->
+    <nav>
+        <ul>
+            <li><a href="#community">커뮤니티</a></li>
+            <li><a href="#second-hand">중고거래/나눔</a></li>
+            <li><a href="#joint-trading">공동구매</a></li>
+            <li><a href="#promotion">홍보</a></li>
+            <li><a href="#notice">공지사항</a></li>
+            <li><a href="#my-page">마이페이지</a></li>
+        </ul>
+    </nav>
+
+    <!-- Content Section - Community -->
+    <section id="community">
+        <h2>Community</h2>
+        <!-- Add your community content here -->
+        <div class="search-container">
+            <form action="#" method="get"> <!-- 검색 기능을 추가할 경우 해당 form 태그의 action과 method를 설정하십시오. -->
+                <input type="text" name="search" placeholder="검색어를 입력하세요"> <!-- 검색칸 -->
+                <input type="submit" value="검색"> <!-- 검색 버튼 -->
+            </form>
+        </div>
+        <h3>게시판</h3>
+        <table border="1" cellpadding="5">
+            <tr>
+                <th>번호</th>
+                <th>분류</th>
+                <th>제목</th>
+                <th>조회수</th>
+            </tr>
+            <tr>
+                <td><a href="#">713</a></td>
+                <td>요리</td>
+                <td>여름맞이 금연 계획</td>
+                <td>21</td>
+            </tr>
+            <tr>
+                <td><a href="#">714</a></td>
+                <td>요리</td>
+                <td>여름맞이 금연 계획</td>
+                <td>21</td>
+            </tr>
+            <tr>
+                <td><a href="#">715</a></td>
+                <td>요리</td>
+                <td>여름맞이 금연 계획</td>
+                <td>21</td>
+            </tr>
+            <tr>
+                <td><a href="#">716</a></td>
+                <td>요리</td>
+                <td>여름맞이 금연 계획

@@ -1,0 +1,29 @@
+<%@ page language="java" contentType="text/html; charset=EUC-KR" pageEncoding="EUC-KR"%>
+<!DOCTYPE html>
+<html>
+<head>
+    <title>My Website</title>
+    <style>
+        /* 이전에 작성한 스타일 코드를 그대로 유지합니다. */
+        /* 게시판 테이블 스타일 */
+        table {
+            width: 80%; /* 테이블 넓이 설정 (예시로 80% 지정) */
+            border-collapse: collapse; /* 테이블 셀 경계를 합치도록 설정 */
+            margin: 20px auto; /* 가운데 정렬을 위해 margin 설정 */
+        }
+        th, td {
+            padding: 10px; /* 셀 안의 콘텐츠와 경계 간격 설정 */
+            text-align: center; /* 가운데 정렬 */
+        }
+        th {
+            background-color: #ccc; /* 테이블 헤더 배경색 설정 */
+        }
+        td {
+            background-color: #f2f2f2; /* 테이블 셀 배경색 설정 */
+        }
+    </style>
+</head>
+<body>
+    <!-- 이하 생략 -->
+</body>
+</html>

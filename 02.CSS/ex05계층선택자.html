@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+             /*
+            계층선택자 
+            - 위치를 기준으로 디자인을 적용하는 방법*/
+  
+            /* 1. 자손선택자 */  
+
+
+            /*
+            div p{                  
+                color : red;            
+            }
+            */
+            /*<p> 강아지의 글씨는 빨간색이 되지만 <p> 송아지는 <div> 자손이 아니므로 적용되지 얺는다 */
+            
+
+           /* 2. 자식선택자 */ 
+           div > p {                         /*<div>의 자식인 <p>까지만 적용된다 */
+            color : blue;
+
+           }     
+
+           /* 3.근접후행 선택자 */
+           /*<p>옆 <span>토마토를 선택해서 글씨 색을 바꾸겠다  */
+        /*  p + span{                   
+                color : red;
+            } */
+
+           /* 4. 후행 선택자 */
+           /* <p>옆 <span> 모두를 선택하겠다 */ 
+            p ~ span{   /*<p>에서 오는 모든 <span>를 선택해야겠다 */
+                    color :red;
+            }
+
+
+
+
+
+    </style>
+
+</head>
+
+
+
+<body>
+    <p>송아지</p>
+
+    <div>                          <!-- <div>영역을 나누는 태그 -->
+        
+        <p>강아지</p>    
+
+        <table>
+            <tr>
+                <td>
+                    <p>병아리</p>        <!--<p>병아리도 <div> 자손이므로 글씨색이 빨간색이된다
+                                             <p>병아리는 <div> 자식은 되지못하고 자손선택자가 된다   -->
+                </td>
+
+            </tr>
+        </table>
+        
+        <span>고양이</span>          <!-- <span> 영역을 나누는 태그 -->
+           
+    </div>
+
+    <p>까르보나라</p>
+    <span>토마토</span>
+    <span>바질</span>
+    <span>바지락</span>
+
+    
+</body>
+</html>

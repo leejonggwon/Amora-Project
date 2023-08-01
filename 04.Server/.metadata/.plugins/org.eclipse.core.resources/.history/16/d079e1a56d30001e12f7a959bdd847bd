@@ -1,0 +1,45 @@
+package com;
+
+import java.io.IOException;
+import java.io.PrintWriter;
+
+import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+/**
+ * Servlet implementation class EX08Join
+ */
+@WebServlet("/EX08Join")
+public class EX08Join extends HttpServlet {
+	private static final long serialVersionUID = 1L;
+
+	/**
+	 * @see HttpServlet#service(HttpServletRequest request, HttpServletResponse response)
+	 */
+	protected void service(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+
+		
+		//아래/ 포스트방식은 url이 request 객체에 있기때문에 request에 인코딩을 해줘야한다  
+		request.setCharacterEncoding("EUC-KR");
+		
+		//아래/ 서블릿에 들어오는것에는 인코딩이 되었지만 브라우저에 들어오는것에는 인코딩이 되어 있지 않는다 
+		response.setCharacterEncoding("EUC-KR");
+		
+		PrintWriter out = response.getWriter(); // 웹페이지에 데이터를 출력하기 위해서 out객체가 필요하다 
+		
+		String id = request.getParameter("id");   //웹에서 데이터를 전달하는 포메팅을 Parameter라고 한다
+		out.print(id);
+		
+		String pw = request.getParameter("pw");
+		out.print(pw);
+		
+		String name = request.getParameter("name");
+		out.print(name);
+		
+		
+	}
+
+}
